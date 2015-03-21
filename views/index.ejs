@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- head -->
+<head profile="http://www.w3.org/2005/10/profile">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/odometer-theme-default.css" />
+  <link rel="stylesheet" href="js/alertifyjs/css/alertify.min.css" />
+  <link rel="stylesheet" href="js/alertifyjs/css/themes/default.min.css" />
+  <title>Worderp</title>
+</head>
+
+
+<!-- page -->
+<div class="book">
+  <div class="container-fluid">
+
+    <!-- top row -->  
+    <div class="row">
+      <!-- left column -->
+      <div class="col-xs-6 leftSide">
+        <!-- logo -->
+        <img src="/images/logo.png" alt="logo" class="logo">
+      </div>
+      <!-- right column -->
+      <div class="col-xs-6 rightSide">
+        <!-- timer -->
+        <div id="countdown"></div>
+      </div>
+    </div>
+
+    <!-- bottom row -->        
+    <div class="row">
+      <!-- left column -->
+      <div class="col-xs-6 leftSide">
+        <!-- story so far introduction -->
+        <font face="Book Antiqua" class = "intro">
+          <i>The story so far...</i><br>
+        </font>
+        <div id = "storySoFarContainer">
+          <div id="storySoFarText">
+          </div>
+        </div>
+        <div class="archiveNavigation">
+          <button id="back"><img src="/images/leftArrow.svg" alt="back" class="back"></button>
+          Page:&nbsp;
+          <span class="odometer" id="pageNumber"></span>
+          <button id="forward"><img src="/images/rightArrow.svg" alt="forward" class="forward"></button>
+        </div>
+      </div>
+      <!-- right column -->
+      <div class="col-xs-6 rightSide">
+        <!-- number of players -->
+        <div class="stats">
+          Derpers Online:&nbsp;
+          <span class="odometer" id="playerCount"></span>
+        </div>
+        <!-- word input -->
+        <div class="input-group">
+          <input id='word' type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default submitButtonCustom" type="submit" id='submit'>Add Word!</button>
+            </span>
+        </div>
+        <!-- buttons list -->
+        <div id="wordButtonsList">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- javascript code -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src='js/index.js'></script>
+<script src="js/alertifyjs/alertify.min.js"></script>
+<script src="js/odometer.js"></script>
+</html>
